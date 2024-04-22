@@ -1,4 +1,4 @@
-public class Editor {
+public class Editor implements Rate<Editor> {
 
     public int id;
     public String setup;
@@ -30,5 +30,10 @@ public class Editor {
                 "id=" + id +
                 ", setup='" + setup + '\'' +
                 '}';
+    }
+
+    @Override
+    public void charge(double hourlyRate, int hours) {
+
     }
 }
