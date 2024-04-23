@@ -3,6 +3,8 @@ public class Editor implements Rate<Editor> {
     public int id;
     public String setup;
 
+    public double price;
+
     public Editor(int id, String setup) {
         this.id = id;
         this.setup = setup;
@@ -20,6 +22,14 @@ public class Editor implements Rate<Editor> {
         return setup;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     public void setSetup(String setup) {
         this.setup = setup;
     }
@@ -34,6 +44,6 @@ public class Editor implements Rate<Editor> {
 
     @Override
     public void charge(double hourlyRate, int hours) {
-
+        this.price = hours * hourlyRate;
     }
 }
