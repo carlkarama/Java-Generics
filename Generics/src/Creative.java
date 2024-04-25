@@ -2,17 +2,22 @@ import java.util.List;
 
 public class Creative<T> {
 
-    public List<T> skills;
+    public List<T> creatives;
 
     public Creative() {
 
     }
 
-    public List<T> getSkills() {
-        return skills;
+    public List<T> getCreatives() {
+        return creatives;
     }
 
-    public void setSkills(List<T> skills) {
-        this.skills = skills;
+    public void setCreatives(List<T> creatives) {
+        this.creatives = creatives;
+    }
+
+    public void listCreatives() {
+        System.out.println("---------- CREATIVES ----------");
+        System.out.println(getCreatives());
     }
 }
